@@ -1,0 +1,202 @@
+<html>
+   <head>
+     <script type = "text/javascript">
+function intro()
+{
+    alert("Welcome to my MasterMind!");
+}
+
+function randomGuess()
+{
+    var i=Math.floor((6)*Math.random());
+    var j=Math.floor((6)*Math.random());
+    var k=Math.floor((6)*Math.random());
+    var m=Math.floor((6)*Math.random());
+
+    guess1=colors.charAt(i)+colors.charAt(j)+colors.charAt(k)+colors.charAt(m);
+
+     return guess1;
+}
+
+function returnCode(code,guess)
+{
+    rcode=ng=nc="";
+
+    for (i=0;i<4;i++)  // go through each character in guess and code
+
+        if(code.charAt(i)==guess.charAt(i))//if you have a match in this position
+        {
+            rcode=rcode+"a";   // add a 1 to your return code
+        }
+        else
+        {
+            ng=ng+guess.charAt(i);  // if no match, just add to guess
+            nc=nc+code.charAt(i);  // if no match, just add to code
+        }
+
+        for (x=0;x<ng.length;x++)
+           {
+                 nc2="";  f=0;
+                 for(y=0;y<nc.length;y++)
+                      if (ng.charAt(x)==nc.charAt(y))
+                      {   
+                            if (f==0) rcode=rcode +"z"
+                            else nc2=nc2+nc.charAt(y);
+                            f=1;       
+                      }
+                      else
+                           nc2=nc2+nc.charAt(y);
+                      nc=nc2; 
+           }   
+        
+        return rcode;  //return code is the number of a's and z's you found
+}
+
+function next2()
+{
+	g2 = randomGuess()
+	rc = returnCode(g1,g2)
+	while(rc != f1)
+	{
+		g2 = randomGuess()
+		rc = returnCode(g1,g2)
+	}
+	return g2;
+}
+ 
+function next3()
+{
+	g3 = randomGuess()
+	rc1 = returnCode(g1,g3)
+	rc2 = returnCode(g2,g3)
+	while(rc1 != f1 || rc2 != f2)
+	{
+		g3 = randomGuess()
+		rc1 = returnCode(g1,g3)
+		rc2 = returnCode(g2,g3)
+	}
+	return g3
+}
+
+function next4()
+{
+	g4 = randomGuess()
+	rc1 = returnCode(g1,g4)
+	rc2 = returnCode(g2,g4)
+	rc3 = returnCode(g3,g4)
+	while(rc1 != f1 || rc2 != f2 || rc3 != f3)
+	{
+		g4 = randomGuess()
+		rc1 = returnCode(g1,g4)
+		rc2 = returnCode(g2,g4)
+		rc3 = returnCode(g3,g4)
+	}
+	return g4
+}
+
+function next5()
+{
+	g5 = randomGuess()
+	rc1 = returnCode(g1,g5)
+	rc2 = returnCode(g2,g5)
+	rc3 = returnCode(g3,g5)
+	rc4 = returnCode(g4,g5)
+	while(rc1 != f1 || rc2 != f2 || rc3 != f3 || rc4 != f4)
+	{
+		g5 = randomGuess()
+		rc1 = returnCode(g1,g5)
+		rc2 = returnCode(g2,g5)
+		rc3 = returnCode(g3,g5)
+		rc4 = returnCode(g4,g5)
+	}
+	return g5
+}
+
+function next6()
+{
+	g6 = randomGuess()
+	rc1 = returnCode(g1,g6)
+	rc2 = returnCode(g2,g6)
+	rc3 = returnCode(g3,g6)
+	rc4 = returnCode(g4,g6)
+	rc5 = returnCode(g5,g6)
+	while(rc1 != f1 || rc2 != f2 || rc3 != f3 || rc4 != f4 || rc5 != f5)
+	{
+		g5 = randomGuess()
+		rc1 = returnCode(g1,g6)
+		rc2 = returnCode(g2,g6)
+		rc3 = returnCode(g3,g6)
+		rc4 = returnCode(g4,g6)
+		rc5 = returnCode(g5,g6)
+	}
+	return g6
+}
+
+ 
+//   ************  main program  *******************
+
+        alert("start");
+        intro();
+        colors = "rgbywt";
+
+        g1=randomGuess();
+	alert("My first guess is " + g1 );
+	f1 = prompt("Enter feedback using a and z:");
+	
+	if(f1 == "aaaa")
+	{
+		alert("I got it!");
+	}
+ 
+ 
+	g2 = next2();
+	alert("My second guess is " + g2 );
+	f2 = prompt("Enter feedback using a and z:");
+ 
+	if(f2 == "aaaa")
+	{
+		alert("I got it!");
+	}
+ 
+	g3 = next3();
+	alert("My third guess is " + g3 );
+	f3 = prompt("Enter feedback using a and z:");
+	
+	if(f3 == "aaaa")
+	{
+		alert("I got it!");
+	}
+	
+	g4 = next4();
+	alert("My fourth guess is " + g4 );
+	f4 = prompt("Enter feedback using a and z:");
+	
+	if(f4 == "aaaa")
+	{
+		alert("I got it!");
+	}
+ 
+	g5 = next5();
+	alert("My fifth guess is " + g5 );
+	f5 = prompt("Enter feedback using a and z:");
+	
+	if(f5 == "aaaa")
+	{
+		alert("I got it!");
+	}
+ 
+	g6 = next6();
+	alert("My sixth guess is " + g6 );
+	f6 = prompt("Enter feedback using a and z:");
+	
+	if(f6 == "aaaa")
+	{
+		alert("I got it!");
+	}
+
+ 
+</script>
+
+</head>
+</html>
+  
