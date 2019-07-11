@@ -1,0 +1,70 @@
+
+<html>
+ <!-- Computers and Cognition -->
+<!-- Dong Tran -->
+<!-- 4/16/2018 -->
+<!-- Change Program -->
+<!-- =============================================== -->
+
+ <body>
+
+   <script type="text/javascript">
+     purprice = prompt("Enter amount of purchase ","");
+     purprice = parseFloat(purprice);
+     tax = 0.087 * purprice
+
+     collected = prompt("Enter amount collected by customer ","");
+     collected = parseFloat(collected);
+     
+     document.write("The collected money: " + collected + "<p>")
+     document.write("The purchase price: " + purprice + "<p>")
+     document.write("Taxes: " + tax.toFixed(2) + "<p>")
+     
+     purprice = purprice + tax
+
+     change = collected - purprice
+     document.write("The total amount of change: " + change.toFixed(2) + "<p>");
+     
+     change = change*100
+     
+     dollar = parseInt(change / 100);
+     document.write("Dollars " + dollar + "<p>");
+     
+     bill20 = parseInt(dollar / 20)
+     document.write("$20 bill " + bill20 + "<p>");
+     
+     dollar = dollar % 20
+     
+     bill10 = parseInt(dollar / 10)
+     document.write("$10 bill " + bill10 + "<p>");
+     
+     dollar = dollar % 10
+     
+     bill5 = parseInt(dollar / 5)
+     document.write("$5 bill " + bill5 + "<p>");
+     
+     dollar = dollar % 5
+     bill1 = parseInt(dollar)
+     document.write("$1 bill " + bill1 + "<p>");
+     
+     change = change % 100
+
+     quarter = parseInt(change / 25);
+     document.write("Quarters " + quarter+ "<p>");
+
+     change = change % 25
+     
+     dime = parseInt(change / 10);
+     document.write("Dimes " + dime + "<p>");
+     
+     change = change % 10
+     
+     nickel = parseInt(change / 5);
+     document.write("Nickels " + nickel + "<p>");
+     
+     change = change % 5 
+     document.write("Pennies " + Math.round(change) + "<p>");
+   
+   </script>
+ </body>
+</html>
