@@ -1,0 +1,55 @@
+
+
+<html>
+ <!-- Computers and Cognition -->
+<!-- Dong Tran -->
+<!-- 4/18/2018 -->
+<!-- Movie Tickets Program -->
+<!-- =============================================== -->
+  <body>
+
+   <script type="text/javascript">
+
+       type = prompt("Enter adult,student, or kid","adult");
+       coupon = prompt("Do you have a coupon","yes");
+       wed = prompt("Is today Wednesday","yes");
+       
+       if (type == "adult" && coupon == "yes" && wed == "yes") {
+         document.write("that will be $5.00 please.");
+       }
+       if (type == "student" && coupon == "yes" && wed == "yes") {
+         document.write("that will be $3.50 please.");
+       }
+       
+       if (type == "adult" && coupon == "no" && wed == "no") {
+         document.write("that will be $12.00 please.");
+       }
+       if (type == "student" && coupon == "no" && wed == "no") {
+         document.write("that will be $9.00 please.");
+       }
+       
+       if (type == "adult" && coupon == "yes" && wed == "no") {
+         document.write("that will be $11.00 please.");
+       }
+       if (type == "student" && coupon == "yes" && wed == "no") {
+         document.write("that will be $8.00 please.");
+       }
+       
+       if (type == "adult" && coupon == "no" && wed == "yes") {
+         document.write("that will be $6.00 please.");
+       }
+       if (type == "student" && coupon == "no" && wed == "yes") {
+         document.write("that will be $4.50 please.");
+       }
+       
+       if (type == "kid") {
+         document.write("Free tickets for kids 6 years old or under.");
+     }
+     
+   </script>
+
+ </body>
+</html>
+
+
+
