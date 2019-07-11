@@ -1,0 +1,36 @@
+
+<html>
+ <!-- Computers and Cognition -->
+<!-- Dong Tran -->
+<!-- 5/2/2018 -->
+<!-- Solve By Exhaustion Problem-->
+<!-- =============================================== -->
+   <head>
+     <script type = "text/javascript">
+	 
+    for (i=0;i<100;i++)
+    {
+        for (j=0;j<100;j++)
+        {
+            for (k=0;k<100;k++)
+            {
+                 for (m=0;m<100;m++)
+                 {
+                   if(j == 2*i + 4)
+                     if (k == i + j)
+                         if (m - k == i)
+                            if(j + k == i + m + 4)
+                                 document.write(i+" "+j+" "+k+" "+m+"<br>");
+
+                 }
+            }
+        }
+     }
+
+ 
+
+     </script>
+   </head>   
+   </html>
+
+
