@@ -1,0 +1,50 @@
+
+<html>
+   <head>
+     <script type = "text/javascript">
+         myArray = []
+
+         function printTable(nums)
+         {    
+
+            
+             for(y=0;y<12;y++)
+             {
+                 for(x=0;x<12;x++)
+                  {  
+                          document.write(myArray[y][x] + "    ");
+                  }
+                  document.write("<br>"); // 2 blank lines after each row
+             }
+             
+               document.write("<br>");     
+         }
+
+         function initTable()
+         {
+                for(y=0;y<12;y++)
+                    for(x=0;x<12;x++)
+                          myArray[x][y]=0
+          }
+
+         function findValues(s)
+         {     alert("in find values");
+                count = 1
+                row=0;
+               col = parseInt(s/2)
+               myArray[row][col] = count
+         }
+
+          alert("start");
+         for(x=0;x<12;x++)
+           myArray[x] = []
+         initTable();
+        size = parseInt(prompt("Enter the size of square you want.  Must be odd "));
+        findValues(size);
+      printTable(myArray);
+      
+
+     </script>
+   </head>   
+   </html>
+
