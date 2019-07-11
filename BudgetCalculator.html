@@ -1,0 +1,46 @@
+
+<!doctype html>
+<!-- Computers and Cognition -->
+<!-- Dong Tran -->
+<!-- 4/10/2018 -->
+<!-- The Simple Budget Calculator -->
+<!-- =============================================== -->
+ 
+<html>
+ <head>
+   <title> Budget Calculator </title>
+ </head>
+ 
+ <body>
+   <h2>Welcome to Simple Budget Calculator!</h2>
+   <p>
+     Enter your name: <input type="text" id="nameBox" size=12 value="">
+      Enter your age: <input type="text" id="ageid" size=12 value="">
+       Enter your city: <input type="text" id="city" size=12 value="">
+       </p>
+        <p>
+         Enter your monthly income: $ <input type="text" id="incomeid" size=8 value="">
+       	  Enter your monthly expenses: $ <input type="text" id="expensesid" size=8 value="">
+           </p>
+            <p>
+             Total monthly savings: $ <input type="text" id="savingsid" size=8 value="" readonly				>
+              </p>
+              
+   <input type="button" value="Calculate"
+          onclick="name = document.getElementById('nameBox').value;
+                     age = document.getElementById('ageid').value;
+                     city = document.getElementById('city').value; 
+                     income = parseFloat(document.getElementById('incomeid').value);
+                     expenses = parseFloat(document.getElementById('expensesid').value);
+                     savings = income - expenses;
+                     document.getElementById('savingsid').value = savings;
+
+                     document.getElementById('outputDiv').innerHTML=
+                     'Hello ' + name + ' from ' + city + '.' + '<br> Congratulation! You are saving $' 
+                     + savings + ' everymonth.'">
+   <hr>
+   <div id="outputDiv"></div>
+ </body>
+</html>
+
+
