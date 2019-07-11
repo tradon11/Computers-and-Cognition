@@ -1,0 +1,40 @@
+<html>
+   <body>
+
+   <script type="text/javascript">
+       score = parseInt(prompt('Enter score: '));
+       count90 = count80 = sum80 = average80 = highest = 0;
+       while(score >= 0)
+       {
+       		if((score > 90) && (score % 2 == 0))
+            {
+            	alert('even over 90');
+            	count90 = count90 + 1;
+            }
+            
+            if((score < 90) && (score >= 80) && (score%2 == 1))
+            {
+            	sum80 = sum80 + score;
+                count80 = count80 + 1;
+            }
+            average80 = sum80/count80;
+            
+            if(score < 80)
+            {
+                if(score > highest)
+                {
+                	highest = score;
+                }
+            }
+            
+            score = parseInt(prompt('Enter score: '));
+       }
+       document.write('We have ' + count90 + ' numbers that are greater than 90 and even'+'<br>')
+       document.write('The average of 80s is ' + average80+'<br>')
+       document.write('The highest score below 79 is: ' + highest+'<br>')
+    
+     
+   </script>
+ 
+ </body>
+</html>
