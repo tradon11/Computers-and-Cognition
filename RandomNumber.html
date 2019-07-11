@@ -1,0 +1,27 @@
+<html>
+   <body>
+   <script type="text/javascript">
+       num = Math.random()*100+1;
+       n = parseInt(num);
+       alert(n);
+       guess = prompt("enter your guess","");
+       guess = parseInt(guess);
+       a = 1;
+       
+       while(guess != n){
+
+       if (guess > n) 
+             alert("too high");
+
+       if (guess < n)
+             alert("too low");
+       guess = prompt("enter your guess","");
+       guess = parseInt(guess);
+       a = a + 1;
+       }
+
+       if (guess == n)
+             alert("you got it! and " + a + " guesses")
+   </script>
+ </body>
+</html>
