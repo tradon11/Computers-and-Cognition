@@ -1,0 +1,569 @@
+<html>
+ <!-- Computers and Cognition -->
+<!-- Dong Tran -->
+<!-- 5/5/2018 -->
+<!-- Tic Tac Toe -->
+<!-- =============================================== -->
+<head>
+<script type="text/javascript">
+
+cnt = 0;  // count how many times you have moved
+stop = 0;
+function play(id)
+{
+  if(stop == 0)
+  {
+	if ( document.getElementById(id).value == "_")  // see if that is an open spot
+	{
+      
+        document.getElementById(id).value = "O";  // put n 'O' in the button clicked
+             
+        if(cnt==0)  // this is your second move;
+        {
+            if ((document.getElementById("button7").value == "O") || (document.getElementById("button4").value == "O"))
+            {
+                  document.getElementById("button3").value = "X";
+            }
+            else
+            {
+                 document.getElementById("button7").value = "X";
+            }
+        }
+          
+        if(cnt==2)  // this is your fourth move;
+        {
+			 
+             //set 1
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button2").value == "O") && (document.getElementById("button4").value == "O"))
+            {
+                  document.getElementById("button5").value = "X";
+            }
+             
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button2").value == "O") && (document.getElementById("button3").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button2").value == "O") && (document.getElementById("button5").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button2").value == "O") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button2").value == "O") && (document.getElementById("button8").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button2").value == "O") && (document.getElementById("button9").value == "O"))
+            {
+                 document.getElementById("button4").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+            }
+             
+            //set 2
+			//continue set
+            if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O"))
+             {
+                  document.getElementById("button5").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button2").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+             }
+			 if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button5").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button3").value == "O") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button8").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button3").value == "O") && (document.getElementById("button9").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+             }
+             
+             //set 3
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button5").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button5").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+                 (document.getElementById("button4").value == "O") && (document.getElementById("button7").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button8").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+                 (document.getElementById("button4").value == "O") && (document.getElementById("button9").value == "O"))
+             {
+                 document.getElementById("button2").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+             }
+             
+             //set 4
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O"))
+             {
+                  document.getElementById("button6").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button2").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button3").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button5").value == "O") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button8").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button5").value == "O") && (document.getElementById("button9").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+             }
+			 
+             //set 5
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+              	 (document.getElementById("button6").value == "O") && (document.getElementById("button4").value == "O"))
+             {
+                  document.getElementById("button5").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button6").value == "O") && (document.getElementById("button2").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button6").value == "O") && (document.getElementById("button3").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button6").value == "O") && (document.getElementById("button5").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+             }
+			 if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button6").value == "O") && (document.getElementById("button8").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button6").value == "O") && (document.getElementById("button9").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+             }
+             
+             //set 6
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button5").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button4").value == "O"))
+             {
+                 document.getElementById("button2").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button5").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+                 (document.getElementById("button7").value == "O") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button8").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+                 (document.getElementById("button7").value == "O") && (document.getElementById("button9").value == "O"))
+             {
+                 document.getElementById("button2").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+             }
+			 
+             //set 7
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button4").value == "O"))
+             {
+                  document.getElementById("button5").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button2").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button3").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button8").value == "O") && (document.getElementById("button5").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button6").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button8").value == "O") && (document.getElementById("button9").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+				 alert('You lose!');
+				 stop = 1;
+             }
+			 
+             //set 8
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button4").value == "O"))
+             {
+                  document.getElementById("button5").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button2").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button3").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button9").value == "O") && (document.getElementById("button5").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+                 (document.getElementById("button9").value == "O") && (document.getElementById("button8").value == "O"))
+             {
+                 document.getElementById("button4").value = "X";
+             }
+          }
+          if(cnt==4)  // this is your sixth move;
+          {
+			 
+             //set 1
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button2").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O")) 
+             {
+                  document.getElementById("button3").value = "X";
+             }
+             
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button2").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button3").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button2").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button8").value == "O")) 
+             {
+                 document.getElementById("button9").value = "X";
+                 alert('You lose!');
+				 stop = 1;
+             }
+			 
+             //set 2
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button6").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button2").value == "O"))
+             {
+             	 document.getElementById("button9").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+             	 document.getElementById("button9").value = "X";
+                 alert('You lose!');
+				 stop = 1;
+             }
+			 
+             //set 3
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+             	 document.getElementById("button7").value = "X";
+                 alert('You lose!');
+				 stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button7").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button4").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+             	 document.getElementById("button9").value = "X";
+                  alert('You lose!');
+				  stop = 1;
+             }
+             
+             //set 4
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button8").value = "X";
+             }
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button3").value == "O"))
+             {
+                  document.getElementById("button9").value = "X";
+             }
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                  document.getElementById("button2").value = "X";
+             }
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button3").value = "X";
+             }
+             
+             //set 5
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+              	 (document.getElementById("button6").value == "O") && (document.getElementById("button4").value == "O") &&
+              	 (document.getElementById("button5").value == "X") && (document.getElementById("button2").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+              	 (document.getElementById("button6").value == "O") && (document.getElementById("button4").value == "O") &&
+              	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button3").value = "X";
+                  alert('You lose!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+              	 (document.getElementById("button6").value == "O") && (document.getElementById("button4").value == "O") &&
+              	 (document.getElementById("button5").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                  document.getElementById("button9").value = "X";
+                  alert('You lose!');
+				  stop = 1;
+             }
+			 if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+              	 (document.getElementById("button6").value == "O") && (document.getElementById("button4").value == "O") &&
+              	 (document.getElementById("button5").value == "X") && (document.getElementById("button3").value == "O"))
+             {
+                  document.getElementById("button9").value = "X";
+             }   
+             
+             //set 6
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button8").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button4").value == "O"))
+             {
+                 document.getElementById("button9").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button6").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                 document.getElementById("button9").value = "X";
+                 alert('You lose!');
+				 stop = 1;
+             }
+			 
+             //set 7
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button3").value = "X";
+                  alert('You lose!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button2").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button3").value == "O") ||
+                 (document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button8").value == "O") && (document.getElementById("button4").value == "O") &&
+                 (document.getElementById("button5").value == "X") && (document.getElementById("button6").value == "O"))
+             {
+                 document.getElementById("button9").value = "X";
+             }
+             
+             //set 8
+			 //continue set
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button3").value == "O"))
+             {
+                 document.getElementById("button6").value = "X";
+             }
+          }
+          
+          if(cnt==6)  // this is your eighth move;
+          {
+			 
+             //set 1
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button8").value = "X";
+                  alert('Tie!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button3").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                  document.getElementById("button2").value = "X";
+                  alert('Tie!');
+				  stop = 1;
+             }
+             
+             //set 2
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button8").value == "X") && (document.getElementById("button3").value == "O"))
+             {
+                  document.getElementById("button9").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button8").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button3").value = "X";
+             }
+             //set 3
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button3").value == "O") &&
+             	 (document.getElementById("button9").value == "X") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button8").value = "X";
+                  alert('You lose!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button3").value == "O") &&
+             	 (document.getElementById("button9").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                  document.getElementById("button2").value = "X";
+             }
+             //set 4
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button8").value == "O") &&
+             	 (document.getElementById("button2").value == "X") && (document.getElementById("button3").value == "O"))
+             {
+                  document.getElementById("button9").value = "X";
+                  alert('Tie!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button8").value == "O") &&
+             	 (document.getElementById("button2").value == "X") && (document.getElementById("button9").value == "O"))
+             {
+                  document.getElementById("button3").value = "X";
+             }
+             //set 5
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button9").value == "O") &&
+             	 (document.getElementById("button3").value == "X") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button8").value = "X";
+                  alert('Tie!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button5").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button9").value == "O") &&
+             	 (document.getElementById("button3").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                  document.getElementById("button2").value = "X";
+                  alert('You lose!');
+				  stop = 1;
+             }
+             //set 6
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O") &&
+             	 (document.getElementById("button8").value == "X") && (document.getElementById("button4").value == "O"))
+             {
+                  document.getElementById("button6").value = "X";
+                  alert('Tie!');
+				  stop = 1;
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button3").value == "X") &&
+             	 (document.getElementById("button7").value == "O") && (document.getElementById("button2").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button9").value == "O") &&
+             	 (document.getElementById("button8").value == "X") && (document.getElementById("button6").value == "O"))
+             {
+                  document.getElementById("button4").value = "X";
+                  alert('Tie!');
+				  stop = 1;
+             }
+             //set 7
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button3").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button2").value == "O"))
+             {
+                  document.getElementById("button8").value = "X";
+             }
+             if ((document.getElementById("button1").value == "X") && (document.getElementById("button7").value == "X") &&
+             	 (document.getElementById("button9").value == "O") && (document.getElementById("button4").value == "O") &&
+             	 (document.getElementById("button5").value == "X") && (document.getElementById("button3").value == "O") &&
+             	 (document.getElementById("button6").value == "X") && (document.getElementById("button8").value == "O"))
+             {
+                  document.getElementById("button2").value = "X";
+             }
+          }
+         cnt = cnt+2;  // add 2 to count.. each call to play is both an x and o move
+         }
+	}
+}
+</script>
+</head>
+
+<body>
+<input type="button" id="button1" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="X"/>
+<input type="button" id="button2" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<input type="button" id="button3" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<br/>
+<input type="button" id="button4" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<input type="button" id="button5" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<input type="button" id="button6" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<br/>
+<input type="button" id="button7" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<input type="button" id="button8" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+<input type="button" id="button9" style = "width:150px; height:150px; background-color:bisque" onclick=play(this.id) value="_"/>
+
+</body>
+</html>
